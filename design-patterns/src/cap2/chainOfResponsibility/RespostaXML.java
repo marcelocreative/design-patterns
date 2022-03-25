@@ -10,8 +10,11 @@ public class RespostaXML implements Resposta{
 		if(req.getFormato() == Formato.XML) {
 			System.out.println("<conta><titular>"+conta.getTitular()+"</titular><saldo>"+conta.getSaldo()+"</saldo></conta>.");
 		}
-		else {
+		else if(resposta != null) {
 			resposta.responde(req, conta);
+		}
+		else {
+			throw new RuntimeException("Formato de resposta não encontrado");
 		}
 		
 	}

@@ -4,6 +4,7 @@ public enum Formato {
 	
 	XML,
 	CSV,
-	PORCENTO
+	PORCENTO,
+	VIRGULA
 
 }
